@@ -1,0 +1,15 @@
+services:
+  auto-rsa:
+    volumes:
+      - ./custom-overrides/autoRSA.py:/app/autoRSA.py
+    deploy:
+      resources:
+        limits:
+          memory: 2GB
+          cpus: "1"
+  watchtower:
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+          cpus: "0.5"
